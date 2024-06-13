@@ -19,6 +19,7 @@
 </head>
 <body>
     <h1>Operaciones básicas</h1>
+    <p>BIENVENIDOS A CALCULADORA</p>
 
     <form method="post" onsubmit="return validateForm()">
         <label for="num1">Número 1:</label>
