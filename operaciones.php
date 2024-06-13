@@ -30,6 +30,8 @@
         <br>
         <input type="submit" name="operation" value="Restar">
         <input type="submit" name="operation" value="Sumar">
+        <input type="submit" name="operation" value="Multiplicar">
+        <input type="submit" name="operation" value="Dividir">
         <p id="error-message" style="color: red;"></p>
     </form>
 
@@ -52,6 +54,16 @@
             } elseif ($operation == "Sumar") {
                 $resultado = $num1 + $num2;
                 echo "<h2>La suma de $num1 + $num2 es: $resultado</h2>";
+            } elseif ($operation == "Multiplicar") {
+                $resultado = $num1 * $num2;
+                echo "<h2>La multiplicación de $num1 * $num2 es: $resultado</h2>";
+            } elseif ($operation == "Dividir") {
+                if ($num2 != 0) {
+                    $resultado = $num1 / $num2;
+                    echo "<h2>La división de $num1 / $num2 es: $resultado</h2>";
+                } else {
+                    echo "<h2 style='color: red;'>Error: División por cero no permitida.</h2>";
+                }
             }
         }
     }
